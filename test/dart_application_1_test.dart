@@ -3,6 +3,7 @@ import 'package:test/test.dart';
 
 void main() {
   test('calculate', () {
+    print('entramos al test');
     expect(calculate(), 42);
   });
 }
