@@ -25,9 +25,13 @@ void main(List<String> args) {
   print('${emailA.attachFile}, ${emailA.ccRecipients}, ${emailA.body}');
 
   SendEmail notFiles = SendEmail.neverAttachFile();
-  print({'reciepinetes': notFiles.recipients});
-  print({'ccreciepinetes': notFiles.ccRecipients});
-  print({'attach file': notFiles.attachFile});
+  print({'reciepinetes never': notFiles.recipients});
+  print({'ccreciepinetes never': notFiles.ccRecipients});
+  print({'attach file never': notFiles.attachFile});
+  SendEmail yesFiles = SendEmail.allwaysAttachFile();
+  print({'reciepinetes allway': yesFiles.recipients});
+  print({'ccreciepinetes allway': yesFiles.ccRecipients});
+  print({'attach file allway': yesFiles.attachFile});
 }
 
 class SendEmail {
@@ -38,7 +42,7 @@ class SendEmail {
 
   static int countInstances = 0;
   static List allRecipients = [];
-  final defaultRecipient = ['soporte_ggbet@ggbet.com'];
+  static const defaultRecipient = ['soporte_ggbet@ggbet.com'];
 
   // método constructor en dart
   SendEmail({this.recipients, this.ccRecipients, this.attachFile = true}) {
@@ -48,10 +52,12 @@ class SendEmail {
   // otro método constructor en dar
 
   SendEmail.neverAttachFile({this.recipients, this.ccRecipients}) {
+    recipients = defaultRecipient;
     attachFile = false;
   }
   SendEmail.allwaysAttachFile({this.recipients, this.ccRecipients}) {
-    attachFile = false;
+    recipients = [...defaultRecipient, 'brangelina@otmail.com'];
+    attachFile = true;
   }
 
   String getFormatedRecipients() {
