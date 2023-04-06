@@ -43,6 +43,6 @@ void listasAvanzadas() {
       listaAlumnos.where((element) => element.startsWith('S')).toList();
   List nuevaListabool =
       listaAlumnos.where((element) => element.contains('eto') == true).toList();
-  print('lista nueva $nuevaLista');
-  print('lista nueva bool $nuevaListabool');
+  // print('lista nueva $nuevaLista');
+  // print('lista nueva bool $nuevaListabool');
 }
