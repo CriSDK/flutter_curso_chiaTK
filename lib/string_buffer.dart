@@ -5,10 +5,10 @@ void main(List<String> args) {
 
 StringBuffer stringBuffer() {
   StringBuffer buffer = StringBuffer();
-  buffer.write('mango feo ');
-  buffer.write('camacho sano ');
+  buffer.write('Agregamos texto con el método write');
+  buffer.write('Agregamos texto con el método write ');
   buffer.writeAll([
-    'mamas gordas ',
+    'Incluso podemos agregar listas con diferentes tipos y datos y hará el cast por nosotros ',
     100,
     ' ',
     [1, 2, 3]
