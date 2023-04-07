@@ -1,0 +1,27 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "main",
+            "request": "launch",
+            "type": "dart",
+            "program": "bin/main.dart",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "env": {},
+            "console": "terminal",
+        },
+        {
+            "name": "getters_and_setters",
+            "request": "launch",
+            "type": "dart",
+            "program": "poo_windows/getter_and_setter.dart"
+        },
+        {
+            "name": "herencia",
+            "request": "launch",
+            "type": "dart",
+            "program": "poo_windows/herencia.dart"
+        }
+    ]
+}
