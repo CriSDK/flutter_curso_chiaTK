@@ -12,4 +12,10 @@ void main(List<String> args) {
   bool foo = true;
   foo = !foo;
   print('this is foo $foo');
+
+  var bar = {
+    ['a']: 1
+  };
+  print(bar.values);
+  print(bar.keys);
 }

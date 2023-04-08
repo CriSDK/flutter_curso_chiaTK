@@ -4,6 +4,9 @@ void main(List<String> args) {
   mango.type = 'gatuno';
   print(mango.type);
   print(mango.makeSound());
+  print(mango.queComemos());
+  print(mango.quienNosDepreda());
+  print({"type": mango.runtimeType});
 }
 
 abstract class Animal {
@@ -29,7 +32,19 @@ abstract class Animal {
   }
 }
 
-class Cat extends Animal {
+abstract class InterfazAnimal {
+  String uid = '10';
+  String queComemos();
+  String quienNosDepreda();
+}
+
+abstract class InterfazAnimal2 {
+  String bar();
+}
+
+class Cat extends Animal implements InterfazAnimal, InterfazAnimal2 {
+  @override
+  String uid = '10';
   int lifeNumbers;
 
   Cat({this.lifeNumbers = 9, tipo, edad}) : super(tipo: tipo, age: edad);
@@ -37,5 +52,20 @@ class Cat extends Animal {
   @override
   String makeSound() {
     return 'miau';
+  }
+
+  @override
+  String queComemos() {
+    return 'como ratones';
+  }
+
+  @override
+  String quienNosDepreda() {
+    return 'los zorros de la molina';
+  }
+
+  @override
+  String bar() {
+    return 'somos la interfaz animal 2';
   }
 }
