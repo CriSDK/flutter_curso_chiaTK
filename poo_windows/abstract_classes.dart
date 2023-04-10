@@ -36,6 +36,9 @@ abstract class InterfazAnimal {
   String uid = '10';
   String queComemos();
   String quienNosDepreda();
+  String quienNosDepred2a() {
+    return 'tibutr';
+  }
 }
 
 abstract class InterfazAnimal2 {
@@ -43,6 +46,11 @@ abstract class InterfazAnimal2 {
 }
 
 class Cat extends Animal implements InterfazAnimal, InterfazAnimal2 {
+  @override
+  String quienNosDepred2a() {
+    return 'tibutaasddasr';
+  }
+
   @override
   String uid = '10';
   int lifeNumbers;
