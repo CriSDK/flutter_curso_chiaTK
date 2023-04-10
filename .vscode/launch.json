@@ -18,10 +18,10 @@
             "program": "poo_windows/getter_and_setter.dart"
         },
         {
-            "name": "herencia",
+            "name": "punto_equilibrio",
             "request": "launch",
             "type": "dart",
-            "program": "poo_windows/herencia.dart"
+            "program": "lib/punto_equilibrio.dart"
         }
     ]
 }

@@ -18,4 +18,5 @@ void main(List<String> args) {
   };
   print(bar.values);
   print(bar.keys);
+  print(bar.entries);
 }

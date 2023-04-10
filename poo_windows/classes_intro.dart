@@ -14,6 +14,7 @@ void main(List<String> args) {
     'electronic58@microsfot.com'
   ]);
   print(SendEmail.countInstances);
+  print({"emailA._uid": emailA._uid});
   // SendEmail emailB =
   //     SendEmail(recipients: ['Juan004@gmail.com', 'Punko005@outlook.com']);
   // print(SendEmail.countInstances);
@@ -35,6 +36,7 @@ void main(List<String> args) {
 }
 
 class SendEmail {
+  int _uid = 10;
   List? recipients;
   List? ccRecipients;
   bool? attachFile;
