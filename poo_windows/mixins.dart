@@ -4,6 +4,7 @@ void main(List<String> args) {
   Home cheapHome = Home(lado: 10, ancho: 7, totalPisos: 2);
   print(cheapHome.calcularArea(10, 7));
   cheapHome.printea();
+  cheapHome.saluda();
 }
 
 mixin Calculador {
@@ -12,6 +13,10 @@ mixin Calculador {
   }
 
   void printea();
+  void saluda() {}
+  String foo() {
+    return 'sdfd';
+  }
 }
 
 class Home with Calculador {
@@ -24,4 +29,11 @@ class Home with Calculador {
   void printea() {
     print('ooñooooooo');
   }
+
+  // @override
+  // void saluda() {
+  //   // TODO: implement saluda
+  //   super.saluda();
+  //   print('arribeberchi');
+  // }
 }
