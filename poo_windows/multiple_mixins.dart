@@ -1,27 +1,40 @@
-class Animal {
-  void mover() {
-    print('Animal se mueve');
-  }
+class A {
+  String getMessage() => 'A';
 }
 
-class Mamifero extends Animal {
-  @override
-  void mover() {
-    print('Mamífero se mueve');
-  }
+class B {
+  String getMessage() => 'B';
 }
 
-class Ave {
-  void mover() {
-    print('Ave se mueve');
-  }
+class P {
+  String getMessage() => 'P';
 }
 
-class Delfin extends Mamifero with Ave {
-  // Clase que utiliza mixins Mamifero y Ave
+class AB extends P with A, B {
+  // @override
+  // String getMessage() => 'HIJO';
 }
+
+class BA extends P with B, A {}
 
 void main() {
-  final delfin = Delfin();
-  delfin.mover(); // Imprime "Mamífero se mueve"
+  String result = '';
+
+  AB ab = AB();
+  result += ab.getMessage();
+  // print(ab.runtimeType);
+
+  BA ba = BA();
+  result += ba.getMessage();
+  print(ba.runtimeType);
+
+  // print(result);
+
+  // print(ab is P);
+  // print(ab is A);
+  // print(ab is B);
+
+  // print(ba is P);
+  // print(ba is A);
+  // print(ba is B);
 }
