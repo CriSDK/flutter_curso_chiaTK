@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 void main(List<String> args) {
   Home cheapHome = Home(lado: 10, ancho: 7, totalPisos: 2);
   print(cheapHome.calcularArea(10, 7));
