@@ -22,6 +22,12 @@
             "request": "launch",
             "type": "dart",
             "program": "lib/punto_equilibrio.dart"
-        }
+        },
+        {
+            "name": "advanced_mixins",
+            "request": "launch",
+            "type": "dart",
+            "program": "poo/mixins_advanced.dart"
+        },
     ]
 }
